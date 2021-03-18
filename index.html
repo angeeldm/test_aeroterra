@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>AeroTerra</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="cargarDatos" class="btn btn-success btn-carga">Cargar</button>
+
+        <button href="#modal" class="btn btn-primary btn-cosulta" data-toggle="modal">Buscar</button>
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Datos de busqueda <button class="close" data-dismiss="modal">&times;</button></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2"> Descripción:</label>
+                                <div class="col-sm-10">
+                                    <input class="campo" type="text" id="name" placeholder="AEROTERRA S.A.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="direction" class="col-sm-2"> Dirección:</label>
+                                <div class="col-sm-10">
+                                    <input class="campo" type="text" id="direction" placeholder="Buenos Aires">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="number" class="col-sm-2"> Teléfono:</label>
+                                <div class="col-sm-10">
+                                    <input class="campo" type="tel" id="number" placeholder="+54 9 111 222-3333">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="col-sm-2"> Coordenadas: </label>
+                                <div class="col-sm-10">
+                                    <input class="campo" type="text" id="location" placeholder="Buenos Aires - Argentina">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="class" class="col-sm-2"> Categoría:</label>
+                                <div class="col-sm-10">
+                                    <select class="campo" name="class" id="class" placeholder="Seleccionar">
+                                        <option selected disabled>--Seleccionar</option>
+                                        <option value="residencial">Residencial</option>
+                                        <option value="comercial">Comercial</option>
+                                        <option value="mixta">Mixta</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary" id="enviarForm" class="close" data-dismiss="modal">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map" id="viewDiv"></div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://js.arcgis.com/4.18/"></script>
+    <script src="js/mapa.js"></script>
+</body>
+</html>

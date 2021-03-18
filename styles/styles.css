@@ -1,0 +1,34 @@
+html, body, #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+.btn-cosulta{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 30px 0 0;
+    z-index: 1;
+}
+
+.btn-carga{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: 80px 30px 0 0;
+}
+
+.campo{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #C1C1C1;
+    margin: 0 0 0 10px;
+}
+
+.map{
+    position: relative;
+    
+}
